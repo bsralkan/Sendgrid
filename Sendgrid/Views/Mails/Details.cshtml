@@ -1,0 +1,36 @@
+﻿@model Sendgrid.Models.Mail
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Mail</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.emailAdresi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.emailAdresi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.mesaj)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.mesaj)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.konu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.konu)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
